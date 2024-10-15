@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s  # По умолчанию для всех задач
+
+scrape_configs:
+  - job_name: 'node'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9100']  # Измените на 'localhost:9100', если node-exporter запущен на том же хосте
