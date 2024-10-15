@@ -1,0 +1,22 @@
+# First Test with GitHub Actions
+#
+name: Monitoring_Test
+ 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Проверка исходного кода
+      uses: actions/checkout@v2
+
+    - name: Запуск скрипта
+      run: echo "Hello, World!"
